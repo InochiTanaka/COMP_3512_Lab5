@@ -1,4 +1,5 @@
-#include "AbstractOperation.hpp"
+﻿#include "AbstractOperation.hpp"
+#include "Operation.hpp"
 
 int main()
 {
@@ -11,4 +12,18 @@ int main()
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 	system("pause");
+}
+
+char Operation::get_code()
+{
+}
+
+int Operation::perform(int numA, int numB)
+{
+	return 0;
+}
+
+int Operation::˜Operation()
+{
+	return 0;
 }
