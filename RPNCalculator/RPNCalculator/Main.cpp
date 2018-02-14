@@ -27,3 +27,13 @@ int Operation::˜Operation()
 {
 	return 0;
 }
+
+AbstractOperation AbstractOperation::one_parameter(char param)
+{
+	operation_type = param;
+}
+
+char AbstractOperation::get_code()
+{
+	return operation_type;
+}
