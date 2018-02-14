@@ -23,7 +23,7 @@ int Operation::perform(int numA, int numB)
 	return 0;
 }
 
-int Operation::˜Operation()
+void Operation::˜Operation()
 {
 	return 0;
 }
@@ -36,4 +36,8 @@ AbstractOperation AbstractOperation::one_parameter(char param)
 char AbstractOperation::get_code()
 {
 	return operation_type;
+}
+
+void AbstractOperation::˜AbstractOperation()
+{
 }
