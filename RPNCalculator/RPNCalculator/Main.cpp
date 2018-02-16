@@ -14,30 +14,4 @@ int main()
 	system("pause");
 }
 
-char Operation::get_code()
-{
-}
 
-int Operation::perform(int numA, int numB)
-{
-	return 0;
-}
-
-void Operation::˜Operation()
-{
-	return 0;
-}
-
-AbstractOperation AbstractOperation::one_parameter(char param)
-{
-	operation_type = param;
-}
-
-char AbstractOperation::get_code()
-{
-	return operation_type;
-}
-
-void AbstractOperation::˜AbstractOperation()
-{
-}

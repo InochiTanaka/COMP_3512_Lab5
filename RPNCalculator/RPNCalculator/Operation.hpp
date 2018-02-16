@@ -3,7 +3,8 @@
 class Operation 
 {
 	public:
-		virtual char get_code();
-		virtual int perform(int numA, int numB);
-		virtual void ˜Operation();
+		virtual char get_code() = 0;
+		virtual int perform(int numA, int numB) = 0;
+		virtual ~Operation()
+		{};
 };

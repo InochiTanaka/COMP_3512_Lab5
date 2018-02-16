@@ -4,11 +4,21 @@
 
 using namespace std;
 
-class AbstractOperation
+class AbstractOperation : public Operation 
 {	
-	AbstractOperation one_parameter(char param);
-	char get_code();
-	virtual void ˜AbstractOperation();
+	//public:
+		AbstractOperation(const char param)
+		{
+			operation_type = param;
+		};
+
+		char get_code() override
+		{
+			return operation_type;
+		};
+
+		virtual ~AbstractOperation()
+		{};
 
 	private:
 		char operation_type;
