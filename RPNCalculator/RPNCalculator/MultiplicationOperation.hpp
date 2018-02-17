@@ -3,18 +3,21 @@
 
 class MultiplicationOperation : public AbstractOperation
 {
-	static const char OPERATION_CODE = '*';
+	public:
+		static const char OPERATION_CODE = '*';
 
-	int perform(int numA, int numB)
-	{
-		return numA * numB;
-	}
+		MultiplicationOperation() : AbstractOperation(OPERATION_CODE) {}
 
-	char get_code()
-	{
-		return OPERATION_CODE;
-	}
+		int perform(int numA, int numB)
+		{
+			return numA * numB;
+		}
 
-	virtual ~MultiplicationOperation()
-	{};
+		char get_code()
+		{
+			return OPERATION_CODE;
+		}
+
+		virtual ~MultiplicationOperation()
+		{};
 };

@@ -1,12 +1,14 @@
 ﻿#pragma once
+#include "Operation.hpp"
+#include <stdio.h>
 #include <iostream>
 #include <string>
 
-using namespace std;
+//using namespace std;
 
 class AbstractOperation : public Operation 
 {	
-	//public:
+	public:
 		AbstractOperation(const char param)
 		{
 			operation_type = param;

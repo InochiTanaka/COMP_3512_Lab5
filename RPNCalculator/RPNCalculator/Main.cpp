@@ -1,5 +1,8 @@
 ﻿#include "AbstractOperation.hpp"
 #include "Operation.hpp"
+#include "RPNCalculator.hpp"
+
+using namespace std;
 
 int main()
 {
@@ -8,7 +11,8 @@ int main()
 	std::getline(std::cin, formula);
 	std::cout << "You entered " << formula << std::endl;
 	RPNCalculator calculator;
-	int result = calculator.process_formula(formula);
+	int result = calculator.process_form(formula);
+	//int result = 0;
 	std::cout << "The result is:\n";
 	std::cout << result << std::endl;
 	system("pause");

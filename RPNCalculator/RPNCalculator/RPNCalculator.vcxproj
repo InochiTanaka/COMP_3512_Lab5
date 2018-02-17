@@ -24,7 +24,7 @@
     <ClInclude Include="DivisionOperation.hpp" />
     <ClInclude Include="MultiplicationOperation.hpp" />
     <ClInclude Include="Operation.hpp" />
-    <ClInclude Include="SubtractionOperation .hpp" />
+    <ClInclude Include="SubtractionOperation.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
