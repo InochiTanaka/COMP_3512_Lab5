@@ -14,7 +14,6 @@ class RPNCalculator
 		std::stack<int> st;
 		void perform(Operation * opr)
 		{
-
 			int numA;
 			int numB;
 
