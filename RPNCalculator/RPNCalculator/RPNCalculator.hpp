@@ -3,7 +3,6 @@
 #include "AdditionOperation.hpp"
 #include "DivisionOperation.hpp"
 #include "MultiplicationOperation.hpp"
-#include "Operation.hpp"
 #include "SubtractionOperation.hpp"
 
 #include <stack> 
@@ -13,9 +12,21 @@ class RPNCalculator
 	private:
 		int result;
 		std::stack<int> st;
-		size_t stackTop;
-		void perform(int *link)
-		{};
+		void perform(Operation * opr)
+		{
+
+			int numA;
+			int numB;
+
+			numB = st.top();
+			st.pop();
+			numA = st.top();
+			st.pop();
+
+			result = opr->perform(numA, numB);
+
+			st.push(result);
+		};
 	
 	public:
 		Operation* operation_type(char oper) const
@@ -42,28 +53,23 @@ class RPNCalculator
 
 		int process_form(std::string  formula)
 		{
-			std::cout << "testing"<< std::endl;
+			char tempChar;
+			int tempInt;
 
-			Operation * opr;
-			int numA;
-			int numB;
+			std::istringstream iss(formula);
+			std::string operand;
 
-			for (int i = 0; i <= formula.size() - 1; i++)
-			{
-				if (isdigit(formula[i]))
+			while (iss >> operand)
+			{	
+				std::istringstream iss2(operand);
+
+				if (iss2 >> tempInt)
 				{
-					st.push((int)formula[i] - (int)'0');
+					st.push(tempInt);
 				}
 				else
 				{
-					opr = operation_type(formula[i]);
-					numB = st.top();
-					st.pop();
-					numA = st.top();
-					st.pop();
-
-					result = opr->perform(numA, numB);
-					st.push(result);
+					perform(operation_type(operand[0]));
 				}
 			}
 

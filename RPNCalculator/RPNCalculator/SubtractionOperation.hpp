@@ -4,9 +4,9 @@
 class  SubtractionOperation : public AbstractOperation
 {
 	public:
-		static const char OPERATION_CODE = '-';
+		static const char SUBTRACTION_CODE = '-';
 
-		SubtractionOperation() : AbstractOperation(OPERATION_CODE) {}
+		SubtractionOperation() : AbstractOperation(SUBTRACTION_CODE) {}
 
 		int perform(int numA, int numB)
 		{
@@ -15,7 +15,7 @@ class  SubtractionOperation : public AbstractOperation
 
 		char get_code()
 		{
-			return OPERATION_CODE;
+			return SUBTRACTION_CODE;
 		}
 
 		virtual ~SubtractionOperation()

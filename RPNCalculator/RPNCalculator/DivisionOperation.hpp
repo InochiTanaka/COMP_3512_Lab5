@@ -4,9 +4,9 @@
 class DivisionOperation : public AbstractOperation
 {
 	public:
-		static const char OPERATION_CODE = '/';
+		static const char DIVISION_CODE = '/';
 
-		DivisionOperation() : AbstractOperation(OPERATION_CODE) {}
+		DivisionOperation() : AbstractOperation(DIVISION_CODE) {}
 
 		int perform(int numA, int numB)
 		{
@@ -15,7 +15,7 @@ class DivisionOperation : public AbstractOperation
 
 		char get_code()
 		{
-			return OPERATION_CODE;
+			return DIVISION_CODE;
 		}
 
 		virtual ~DivisionOperation()
